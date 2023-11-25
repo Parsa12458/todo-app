@@ -7,7 +7,33 @@
     <meta name="description" content="The classic todo app!" />
     <title>Todo app</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
     <script type="module" src="./assets/js/app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <img
+      src="./assets/images/bg-desktop-light.jpg"
+      alt="light-background"
+      class="bg--light"
+    />
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">TODO</h1>
+        <img
+          src="./assets/images/icon-moon.svg"
+          alt="moon icon"
+          class="header__toggle-theme"
+        />
+      </header>
+
+      <div class="form">
+        <div class="unchecked-circle"></div>
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          class="form__input"
+        />
+      </div>
+    </div>
+  </body>
 </html>

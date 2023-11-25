@@ -1,7 +1,65 @@
+.bg--light {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+body {
+  min-height: 100vh;
+}
+
 .container {
-  min-width: 37.5rem;
-  max-width: 144rem;
-  padding: 4rem 3rem;
-  margin: 0 auto;
-  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 40%;
+  min-height: 80%;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: #fff;
+  letter-spacing: 2rem;
+}
+
+/* FORM */
+.form {
+  margin-top: 2.4rem;
+  padding: 1rem 0;
+  padding-left: 2rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+/* TODO: Later move the .unchecked circle to the task list component */
+.unchecked-circle {
+  width: 2rem;
+  height: 2rem;
+  border: 2px var(--light-grayish-blue) solid;
+  border-radius: 50%;
+}
+
+.form__input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  width: 95%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  padding: 1rem 1.8rem;
+  color: var(--dark-grayish-blue);
+}
+
+.form__input::placeholder {
+  color: #999;
 }
