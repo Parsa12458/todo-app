@@ -1,0 +1,7 @@
+.container {
+  min-width: 37.5rem;
+  max-width: 144rem;
+  padding: 4rem 3rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
