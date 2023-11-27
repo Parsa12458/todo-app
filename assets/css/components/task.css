@@ -1,0 +1,46 @@
+.tasks {
+  list-style: none;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.task {
+  padding: 1.6rem 0;
+  padding-left: 2rem;
+  font-size: 1.6rem;
+  color: var(--very-dark-grayish-blue);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--very-light-grayish-blue);
+}
+
+.task:last-child {
+  border: none;
+}
+
+.task__state {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.task--checked .task__title {
+  text-decoration: line-through;
+  color: var(--light-grayish-blue);
+}
+
+.task__delete {
+  margin-left: auto;
+  margin-right: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.task:hover .task__delete {
+  opacity: 0.7;
+}

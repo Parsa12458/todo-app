@@ -14,8 +14,8 @@
 
 :root {
   /* Primary */
-  --Bright-Blue: hsl(220, 98%, 61%);
-  --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%);
 
   /* Light Theme */
   --very-light-gray: hsl(0, 0%, 98%);
@@ -25,12 +25,12 @@
   --very-dark-grayish-blue: hsl(235, 19%, 35%);
 
   /* Dark Theme */
-  --very-dark-blue: hsl(235, 21%, 11%);
+  /* --very-dark-blue: hsl(235, 21%, 11%);
   --very-dark-Desaturated-blue: hsl(235, 24%, 19%);
   --light-grayish-blue: hsl(234, 39%, 85%);
-  --light-grayish-blue: hsl(236, 33%, 92%); /* hover */
+  --light-grayish-blue: hsl(236, 33%, 92%);  hover 
   --dark-grayish-blue: hsl(234, 11%, 52%);
-  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%); */
 }
 
 * {
@@ -48,4 +48,21 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.8rem;
   line-height: 1.6;
+}
+
+.unchecked-circle {
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 2px var(--light-grayish-blue) solid;
+  border-radius: 50%;
+}
+
+.checked-circle {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background-image: url('../images/icon-check.svg'),
+    linear-gradient(var(--check-background));
+  background-repeat: no-repeat;
+  background-position: center;
 }

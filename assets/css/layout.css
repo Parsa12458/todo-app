@@ -33,7 +33,7 @@ body {
 /* FORM */
 .form {
   margin-top: 2.4rem;
-  padding: 1rem 0;
+  padding: 1.6rem 0;
   padding-left: 2rem;
   background: #fff;
   display: flex;
@@ -41,25 +41,17 @@ body {
   border-radius: 1rem;
 }
 
-/* TODO: Later move the .unchecked circle to the task list component */
-.unchecked-circle {
-  width: 2rem;
-  height: 2rem;
-  border: 2px var(--light-grayish-blue) solid;
-  border-radius: 50%;
-}
-
 .form__input {
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   width: 95%;
   height: 100%;
   border: 0;
   outline: 0;
   padding: 1rem 1.8rem;
-  color: var(--dark-grayish-blue);
+  color: var(--very-dark-grayish-blue);
 }
 
 .form__input::placeholder {
-  color: #999;
+  color: #888;
 }
