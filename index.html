@@ -35,30 +35,46 @@
         />
       </div>
 
-      <ul class="tasks">
-        <li class="task task--unchecked">
-          <div class="unchecked-circle task__state task-state--unchecked">
-            &nbsp;
+      <div class="task-box-container">
+        <ul class="tasks">
+          <li class="task task--unchecked">
+            <div class="unchecked-circle task__state task-state--unchecked">
+              &nbsp;
+            </div>
+            <p class="task__title">Jog around the park 3x</p>
+            <img
+              src="./assets/images/icon-cross.svg"
+              alt="delete the task"
+              class="task__delete"
+            />
+          </li>
+          <li class="task task--checked">
+            <div class="checked-circle task__state task-state--checked">
+              &nbsp;
+            </div>
+            <p class="task__title">Complete online Javascript course</p>
+            <img
+              src="./assets/images/icon-cross.svg"
+              alt="delete the task"
+              class="task__delete"
+            />
+          </li>
+        </ul>
+
+        <div class="action">
+          <span class="action__items-left">1 item left</span>
+
+          <div class="action__filters">
+            <span class="action__filter action__filter--active">All</span
+            ><span class="action__filter">Active</span
+            ><span class="action__filter">Completed</span>
           </div>
-          <p class="task__title">Jog around the park 3x</p>
-          <img
-            src="./assets/images/icon-cross.svg"
-            alt="delete the task"
-            class="task__delete"
-          />
-        </li>
-        <li class="task task--checked">
-          <div class="checked-circle task__state task-state--checked">
-            &nbsp;
-          </div>
-          <p class="task__title">Complete online Javascript course</p>
-          <img
-            src="./assets/images/icon-cross.svg"
-            alt="delete the task"
-            class="task__delete"
-          />
-        </li>
-      </ul>
+
+          <button class="action__delete-all">Clear Completed</button>
+        </div>
+      </div>
+
+      <p class="hint">Drag and drop to reorder list</p>
     </div>
   </body>
 </html>

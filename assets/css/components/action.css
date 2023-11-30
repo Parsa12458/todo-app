@@ -1,0 +1,48 @@
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark-grayish-blue);
+  /* TEMP */
+  padding: 1.3rem 2.8rem;
+  font-size: 1.4rem;
+}
+
+.action__filters {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-weight: bold;
+}
+
+.action__filter {
+  cursor: pointer;
+}
+
+.action__filter--active {
+  color: var(--bright-blue);
+}
+
+.action__delete-all {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  cursor: pointer;
+}
+
+.action__delete-all,
+.action__filter {
+  transition: 0.3s all;
+}
+
+.action__delete-all:hover,
+.action__filter:hover {
+  color: var(--very-dark-grayish-blue);
+}
+
+.action__filter--active:hover {
+  color: var(--bright-blue);
+}

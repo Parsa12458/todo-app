@@ -55,6 +55,11 @@ body {
   height: 2.3rem;
   border: 2px var(--light-grayish-blue) solid;
   border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.unchecked-circle:hover {
+  border: 2px hsl(280, 87%, 65%) solid;
 }
 
 .checked-circle {
