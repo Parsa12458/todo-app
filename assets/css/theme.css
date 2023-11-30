@@ -1,0 +1,70 @@
+/* Body */
+body.dark-theme {
+  background-color: var(--D_very-dark-blue);
+}
+
+/* Background */
+.bg--dark {
+  opacity: 0;
+}
+
+body.dark-theme .bg--dark {
+  opacity: 1;
+}
+
+body.dark-theme .bg--light {
+  opacity: 0;
+}
+
+/* Toggle theme button */
+.header__toggle-theme--sun {
+  display: none;
+}
+
+body.dark-theme .header__toggle-theme--sun {
+  display: block;
+}
+
+body.dark-theme .header__toggle-theme--moon {
+  display: none;
+}
+
+/* Input */
+body.dark-theme .form,
+body.dark-theme .form__input {
+  background-color: var(--D_very-dark-Desaturated-blue);
+  color: var(--D_light-grayish-blue);
+}
+
+body.dark-theme .unchecked-circle {
+  border-color: var(--D_very-dark-grayish-blue);
+}
+
+/* Tasks */
+body.dark-theme .task-box-container {
+  background-color: var(--D_very-dark-Desaturated-blue);
+}
+
+body.dark-theme .task {
+  background-color: var(--D_very-dark-Desaturated-blue);
+  border-bottom-color: var(--D_very-dark-grayish-blue);
+  color: var(--D_light-grayish-blue);
+}
+
+body.dark-theme .task .unchecked-circle:hover {
+  border-color: hsl(220, 98%, 61%);
+}
+
+body.dark-theme .task--checked .task__title {
+  color: var(--D_dark-grayish-blue);
+}
+
+body.dark-theme .task:hover .task__delete {
+  filter: brightness(3);
+}
+
+/* Action */
+body.dark-theme .action__delete-all:hover,
+body.dark-theme .action__filter:hover {
+  color: var(--D_light-grayish-blue-hover);
+}

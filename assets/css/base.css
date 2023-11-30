@@ -25,12 +25,12 @@
   --very-dark-grayish-blue: hsl(235, 19%, 35%);
 
   /* Dark Theme */
-  /* --very-dark-blue: hsl(235, 21%, 11%);
-  --very-dark-Desaturated-blue: hsl(235, 24%, 19%);
-  --light-grayish-blue: hsl(234, 39%, 85%);
-  --light-grayish-blue: hsl(236, 33%, 92%);  hover 
-  --dark-grayish-blue: hsl(234, 11%, 52%);
-  --very-dark-grayish-blue: hsl(233, 14%, 35%); */
+  --D_very-dark-blue: hsl(235, 21%, 11%);
+  --D_very-dark-Desaturated-blue: hsl(235, 24%, 19%);
+  --D_light-grayish-blue: hsl(234, 39%, 85%);
+  --D_light-grayish-blue-hover: hsl(236, 33%, 92%); /* hover */
+  --D_dark-grayish-blue: hsl(234, 11%, 52%);
+  --D_very-dark-grayish-blue: hsl(233, 14%, 35%);
 }
 
 * {
@@ -58,7 +58,7 @@ body {
   transition: all 0.3s;
 }
 
-.unchecked-circle:hover {
+.tasks .unchecked-circle:hover {
   border: 2px hsl(280, 87%, 65%) solid;
 }
 

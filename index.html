@@ -10,11 +10,16 @@
     <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
     <script type="module" src="./assets/js/app.js" defer></script>
   </head>
-  <body>
+  <body class="dark-theme">
     <img
       src="./assets/images/bg-desktop-light.jpg"
       alt="light-background"
       class="bg--light"
+    />
+    <img
+      src="./assets/images/bg-desktop-dark.jpg"
+      alt="light-background"
+      class="bg--dark"
     />
     <div class="container">
       <header class="header">
@@ -22,7 +27,12 @@
         <img
           src="./assets/images/icon-moon.svg"
           alt="moon icon"
-          class="header__toggle-theme"
+          class="header__toggle-theme header__toggle-theme--moon"
+        />
+        <img
+          src="./assets/images/icon-sun.svg"
+          alt="moon icon"
+          class="header__toggle-theme header__toggle-theme--sun"
         />
       </header>
 

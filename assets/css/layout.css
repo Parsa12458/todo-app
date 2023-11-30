@@ -1,4 +1,5 @@
-.bg--light {
+.bg--light,
+.bg--dark {
   position: absolute;
   width: 100%;
   top: 0;
@@ -28,6 +29,10 @@ body {
 .header__title {
   color: #fff;
   letter-spacing: 2rem;
+}
+
+.header__toggle-theme {
+  cursor: pointer;
 }
 
 /* FORM */
