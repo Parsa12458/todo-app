@@ -8,6 +8,7 @@
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
@@ -15,7 +16,7 @@ body {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  width: 40%;
+  width: 55%;
   min-height: 80%;
 }
 
@@ -44,6 +45,7 @@ body {
   display: flex;
   align-items: center;
   border-radius: 1rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
 }
 
 .form__input {

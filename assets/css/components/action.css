@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   color: var(--dark-grayish-blue);
-  /* TEMP */
   padding: 1.3rem 2.8rem;
   font-size: 1.4rem;
 }
@@ -29,6 +29,7 @@
   background: none;
   font-family: inherit;
   font-weight: bold;
+  font-size: inherit;
   color: inherit;
   cursor: pointer;
 }

@@ -11,16 +11,29 @@
     <script type="module" src="./assets/js/app.js" defer></script>
   </head>
   <body class="dark-theme">
-    <img
-      src="./assets/images/bg-desktop-light.jpg"
-      alt="light-background"
-      class="bg--light"
-    />
-    <img
-      src="./assets/images/bg-desktop-dark.jpg"
-      alt="light-background"
-      class="bg--dark"
-    />
+    <picture>
+      <source
+        media="(max-width: 36em)"
+        srcset="./assets/images/bg-mobile-light.jpg"
+      />
+      <img
+        src="./assets/images/bg-desktop-light.jpg"
+        alt="light-background"
+        class="bg--light"
+      />
+    </picture>
+
+    <picture>
+      <source
+        media="(max-width: 34em)"
+        srcset="./assets/images/bg-mobile-dark.jpg"
+      />
+      <img
+        src="./assets/images/bg-desktop-dark.jpg"
+        alt="dark-background"
+        class="bg--dark"
+      />
+    </picture>
     <div class="container">
       <header class="header">
         <h1 class="header__title">TODO</h1>
