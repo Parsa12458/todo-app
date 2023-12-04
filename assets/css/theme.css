@@ -68,3 +68,7 @@ body.dark-theme .action__delete-all:hover,
 body.dark-theme .action__filter:hover {
   color: var(--D_light-grayish-blue-hover);
 }
+
+body.dark-theme .action {
+  background-color: var(--D_very-dark-Desaturated-blue);
+}

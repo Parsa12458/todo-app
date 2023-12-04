@@ -4,8 +4,11 @@
   align-items: center;
   position: relative;
   color: var(--dark-grayish-blue);
+  background-color: #fff;
   padding: 1.3rem 2.8rem;
   font-size: 1.4rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .action__filters {
