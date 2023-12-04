@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
     <script type="module" src="./assets/js/app.js" defer></script>
   </head>
-  <body class="dark-theme">
+  <body>
     <picture>
       <source
         media="(max-width: 36em)"
@@ -37,16 +37,18 @@
     <div class="container">
       <header class="header">
         <h1 class="header__title">TODO</h1>
-        <img
-          src="./assets/images/icon-moon.svg"
-          alt="moon icon"
-          class="header__toggle-theme header__toggle-theme--moon"
-        />
-        <img
-          src="./assets/images/icon-sun.svg"
-          alt="moon icon"
-          class="header__toggle-theme header__toggle-theme--sun"
-        />
+        <div class="header__toggle-theme-container">
+          <img
+            src="./assets/images/icon-moon.svg"
+            alt="moon icon"
+            class="header__toggle-theme header__toggle-theme--moon"
+          />
+          <img
+            src="./assets/images/icon-sun.svg"
+            alt="moon icon"
+            class="header__toggle-theme header__toggle-theme--sun"
+          />
+        </div>
       </header>
 
       <div class="form">
