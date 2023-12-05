@@ -9,8 +9,9 @@ const setToLocalStorage = function () {
 export function addTaskData(title, completed, id) {
   const task = { title, completed, id };
   tasks.push(task);
-  setToLocalStorage();
   console.log('ADD: ', tasks);
+
+  setToLocalStorage();
 }
 
 export function renderTaskData() {
@@ -48,6 +49,7 @@ export function checkTaskData(id) {
   const task = tasks.find(task => task.id === +id);
   task.completed = !task.completed;
   console.log('CHECK OR UNCHECK: ', tasks);
+
   setToLocalStorage();
   setItemsLeft();
 }
@@ -57,6 +59,17 @@ export function deleteTaskData(id) {
 
   index !== -1 && tasks.splice(index, 1);
   console.log('AFTER DELETE: ', tasks);
+
+  setToLocalStorage();
+}
+
+export function deleteCompletedTaskData(completedTasks) {
+  completedTasks &&
+    completedTasks.forEach(completedTask => {
+      const index = tasks.findIndex(task => task.id === completedTask.id);
+      index !== -1 && tasks.splice(index, 1);
+    });
+  console.log('DELETE ALL: ', tasks);
 
   setToLocalStorage();
 }
