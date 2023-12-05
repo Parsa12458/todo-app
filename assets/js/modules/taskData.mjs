@@ -14,15 +14,19 @@ export function addTaskData(title, completed, id) {
   setToLocalStorage();
 }
 
-export function renderTaskData() {
+export function renderTaskData(newTasks, type) {
+  if (!newTasks) return;
+
   const taskContainer = document.querySelector('.tasks');
 
-  const tasksString = localStorage.getItem('tasks');
-  if (!tasksString) return;
+  if (type === 'string') {
+    tasks = JSON.parse(newTasks);
+    newTasks = JSON.parse(newTasks);
+  }
 
-  tasks = JSON.parse(tasksString);
+  taskContainer.innerHTML = '';
 
-  tasks.forEach(task => {
+  newTasks.forEach(task => {
     const html = `
     <li class="task task--${
       task.completed ? 'checked' : 'unchecked'
@@ -40,6 +44,7 @@ export function renderTaskData() {
           />
         </li>
         `;
+
     taskContainer.insertAdjacentHTML('beforeend', html);
     console.log('RENDER: ', tasks);
   });

@@ -6,6 +6,7 @@ import checkTask from './modules/checkTask.mjs';
 import deleteTask from './modules/deleteTask.mjs';
 import setItemsLeft from './modules/setItemsLeft.mjs';
 import deleteCompletedTasks from './modules/deleteCompletedTasks.mjs';
+import filterTasks from './modules/filterTasks.mjs';
 
 // Variables
 const switchThemeBtn = document.querySelector(
@@ -14,6 +15,7 @@ const switchThemeBtn = document.querySelector(
 const form = document.querySelector('.form form');
 const taskContainer = document.querySelector('.tasks');
 const deleteCompletedBtn = document.querySelector('.action__delete-all');
+const filterContainer = document.querySelector('.action__filters');
 
 // Functions
 const getTheme = function () {
@@ -29,7 +31,7 @@ const init = function () {
   switchThemeBtn.addEventListener('click', switchTheme);
 
   // Render tasks from local storage if exists
-  renderTaskData();
+  renderTaskData(localStorage.getItem('tasks'), 'string');
 
   // Set items left
   setItemsLeft();
@@ -51,6 +53,9 @@ const init = function () {
 
   // Delete all tasks
   deleteCompletedBtn.addEventListener('click', deleteCompletedTasks);
+
+  // Filter tasks
+  filterContainer.addEventListener('click', filterTasks);
 };
 
 init();
