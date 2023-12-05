@@ -1,9 +1,15 @@
+import setItemsLeft from './setItemsLeft.mjs';
+
 export let tasks = [];
+
+const setToLocalStorage = function () {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
 
 export function addTaskData(title, completed, id) {
   const task = { title, completed, id };
   tasks.push(task);
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  setToLocalStorage();
   console.log('ADD: ', tasks);
 }
 
@@ -42,5 +48,15 @@ export function checkTaskData(id) {
   const task = tasks.find(task => task.id === +id);
   task.completed = !task.completed;
   console.log('CHECK OR UNCHECK: ', tasks);
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  setToLocalStorage();
+  setItemsLeft();
+}
+
+export function deleteTaskData(id) {
+  const index = tasks.findIndex(task => task.id === +id);
+
+  index !== -1 && tasks.splice(index, 1);
+  console.log('AFTER DELETE: ', tasks);
+
+  setToLocalStorage();
 }

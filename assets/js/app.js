@@ -3,13 +3,14 @@ import switchTheme from './modules/switchTheme.mjs';
 import addTask from './modules/addTask.mjs';
 import { renderTaskData, tasks } from './modules/taskData.mjs';
 import checkTask from './modules/checkTask.mjs';
+import deleteTask from './modules/deleteTask.mjs';
+import setItemsLeft from './modules/setItemsLeft.mjs';
 
 // Variables
 const switchThemeBtn = document.querySelector(
   '.header__toggle-theme-container'
 );
 const form = document.querySelector('.form form');
-const itemsLeftEl = document.querySelector('.action__items-left');
 const taskContainer = document.querySelector('.tasks');
 
 // Functions
@@ -17,13 +18,6 @@ const getTheme = function () {
   const localStorageValue = localStorage.getItem('darkTheme');
   if (!localStorageValue) return;
   if (localStorageValue === 'true') document.body.classList.add('dark-theme');
-};
-
-const setItemsLeft = function () {
-  const itemsLeft = tasks.length;
-  if (itemsLeft === 1 || itemsLeft === 0)
-    itemsLeftEl.textContent = `${itemsLeft} item left`;
-  if (itemsLeft > 1) itemsLeftEl.textContent = `${itemsLeft} items left`;
 };
 
 // init Function
@@ -49,6 +43,9 @@ const init = function () {
 
   // Checking tasks
   taskContainer.addEventListener('click', checkTask);
+
+  // Deleting tasks
+  taskContainer.addEventListener('click', deleteTask);
 };
 
 init();
