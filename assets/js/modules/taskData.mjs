@@ -1,7 +1,10 @@
 export let tasks = [];
-export function addTaskData(title, completed) {
-  tasks.push({ title, completed });
+
+export function addTaskData(title, completed, id) {
+  const task = { title, completed, id };
+  tasks.push(task);
   localStorage.setItem('tasks', JSON.stringify(tasks));
+  console.log('ADD: ', tasks);
 }
 
 export function renderTaskData() {
@@ -11,24 +14,33 @@ export function renderTaskData() {
   if (!tasksString) return;
 
   tasks = JSON.parse(tasksString);
-  console.log(tasks);
 
   tasks.forEach(task => {
     const html = `
-        <li class="task task--${task.completed ? 'checked' : 'unchecked'}">
+    <li class="task task--${
+      task.completed ? 'checked' : 'unchecked'
+    }" data-id="${task.id}">
           <div class="${
             task.completed ? 'checked' : 'unchecked'
           }-circle task__state">
-            &nbsp;
+          &nbsp;
           </div>
           <p class="task__title">${task.title}</p>
           <img
-            src="./assets/images/icon-cross.svg"
-            alt="delete the task"
-            class="task__delete"
+          src="./assets/images/icon-cross.svg"
+          alt="delete the task"
+          class="task__delete"
           />
         </li>
-    `;
+        `;
     taskContainer.insertAdjacentHTML('beforeend', html);
+    console.log('RENDER: ', tasks);
   });
+}
+
+export function checkTaskData(id) {
+  const task = tasks.find(task => task.id === +id);
+  task.completed = !task.completed;
+  console.log('CHECK OR UNCHECK: ', tasks);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }

@@ -2,6 +2,7 @@
 import switchTheme from './modules/switchTheme.mjs';
 import addTask from './modules/addTask.mjs';
 import { renderTaskData, tasks } from './modules/taskData.mjs';
+import checkTask from './modules/checkTask.mjs';
 
 // Variables
 const switchThemeBtn = document.querySelector(
@@ -9,18 +10,17 @@ const switchThemeBtn = document.querySelector(
 );
 const form = document.querySelector('.form form');
 const itemsLeftEl = document.querySelector('.action__items-left');
+const taskContainer = document.querySelector('.tasks');
 
 // Functions
 const getTheme = function () {
   const localStorageValue = localStorage.getItem('darkTheme');
-  console.log(localStorageValue);
   if (!localStorageValue) return;
   if (localStorageValue === 'true') document.body.classList.add('dark-theme');
 };
 
 const setItemsLeft = function () {
   const itemsLeft = tasks.length;
-  console.log(itemsLeft);
   if (itemsLeft === 1 || itemsLeft === 0)
     itemsLeftEl.textContent = `${itemsLeft} item left`;
   if (itemsLeft > 1) itemsLeftEl.textContent = `${itemsLeft} items left`;
@@ -46,6 +46,9 @@ const init = function () {
     // Update items left
     setItemsLeft();
   });
+
+  // Checking tasks
+  taskContainer.addEventListener('click', checkTask);
 };
 
 init();
