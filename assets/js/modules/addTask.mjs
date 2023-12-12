@@ -6,7 +6,7 @@ const input = document.querySelector('.form__input');
 export default function () {
   const id = Date.now();
   const html = `
-        <li class="task task--unchecked" data-id="${id}">
+        <li class="task task--unchecked" data-id="${id}" >
           <div class="unchecked-circle task__state">
             &nbsp;
           </div>

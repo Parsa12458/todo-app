@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--very-light-grayish-blue);
+  cursor: grab;
 }
 
 .task:first-child {

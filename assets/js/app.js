@@ -7,6 +7,8 @@ import deleteTask from './modules/deleteTask.mjs';
 import setItemsLeft from './modules/setItemsLeft.mjs';
 import deleteCompletedTasks from './modules/deleteCompletedTasks.mjs';
 import filterTasks from './modules/filterTasks.mjs';
+import dragAndDropTask from './modules/dragAndDropTask.mjs';
+dragAndDropTask;
 
 // Variables
 const switchThemeBtn = document.querySelector(
@@ -56,6 +58,9 @@ const init = function () {
 
   // Filter tasks
   filterContainer.addEventListener('click', filterTasks);
+
+  // Drag and drop tasks
+  dragAndDropTask();
 };
 
 init();

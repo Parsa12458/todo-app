@@ -9,7 +9,6 @@ const setToLocalStorage = function () {
 export function addTaskData(title, completed, id) {
   const task = { title, completed, id };
   tasks.push(task);
-  console.log('ADD: ', tasks);
 
   setToLocalStorage();
 }
@@ -46,14 +45,12 @@ export function renderTaskData(newTasks, type) {
         `;
 
     taskContainer.insertAdjacentHTML('beforeend', html);
-    console.log('RENDER: ', tasks);
   });
 }
 
 export function checkTaskData(id) {
   const task = tasks.find(task => task.id === +id);
   task.completed = !task.completed;
-  console.log('CHECK OR UNCHECK: ', tasks);
 
   setToLocalStorage();
   setItemsLeft();
@@ -63,7 +60,6 @@ export function deleteTaskData(id) {
   const index = tasks.findIndex(task => task.id === +id);
 
   index !== -1 && tasks.splice(index, 1);
-  console.log('AFTER DELETE: ', tasks);
 
   setToLocalStorage();
 }
@@ -74,7 +70,19 @@ export function deleteCompletedTaskData(completedTasks) {
       const index = tasks.findIndex(task => task.id === completedTask.id);
       index !== -1 && tasks.splice(index, 1);
     });
-  console.log('DELETE ALL: ', tasks);
 
+  setToLocalStorage();
+}
+
+export function updateOrderOfTasks(e) {
+  const oldIndex = e.oldIndex;
+  const newIndex = e.newIndex;
+
+  // Update tasks array
+  const moved = tasks[oldIndex];
+  tasks.splice(oldIndex, 1);
+  tasks.splice(newIndex, 0, moved);
+
+  // Update local storage
   setToLocalStorage();
 }
