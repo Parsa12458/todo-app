@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Todo app" />
+    <meta name="description" content="The classic todo app!" />
+    <title>Todo app</title>
+    
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABO1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////l9Pff8fS54ein2eOn2eL9/v684unr9vj7/f7c8PSl2eKHzNil2OLv+Prz+vue1eB3xdOq2uPm9Pf29/vy8/n3/Py13+eEyteZ097P6u/2+/zByeKOm8r8/f7u+Pq+4+qOz9uU0dzo9fjb4O5meLbh5fH0+vvV7fHx+fv8/P2Gk8Wbps+44eim2eLW2+xkdrXO1Oit3OWttthperja3u7u+Pn6+/2hrNJneLfFy+P7+/23v92IlcbN0ufx8/nj5/Kbp9BsfbltfrqAj8ORnsvg5PD+/v/v8ffQ1em0vduqtNfn6vS/61TcAAAAHHRSTlMAAAQqbK3Z8v0DN5ff+xqJ6jbC/kHBAjjp3qz8qSKHsgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfiChMPAx5FOtlkAAABSUlEQVQ4y4WTZ2OCMBCGc4IMEXAPjB10771t7dLuXbv3/v+/oNigIYjN+4HcJU9CcgMhVxASxLAkK4oshUUhBIgVqBEtqmNXelSLqF4EwDBjmFHMNADoejyRxD4lE/EGAZCScICkFCGc/YHrDkHOACON2yhtOABkTNxWZgYQZHPeqWKH18tlAakas6ezi3E1FQl5Fuhm3LyARD0AsIs9vSSmIrJwC9DXPzA4NEx8C0ktwMjo2PiE3YgFkokxOdUEpmdm5+YXXEBGCjEWl5bpHVZKq2tlMq+gAjHWNza9r9jarpD5QuMX1Z3dv3Fvn72T3LzkweFRfSgd+xJGn3lyeuZ8K+csYNFAXVzWrqr+bDmBoqG+vqnd3t3bDOCE2push8en55fXNzZZTLrfPz6/vn+oX083t2C4JccvWm7Z8xuH33r85v2v/X8Bp/FiyVLnL/0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTAtMTlUMTU6MDM6MzArMDI6MDCzEaEaAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEwLTE5VDE1OjAzOjMwKzAyOjAwwkwZpgAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==" />
+    
+    <script type="module" crossorigin src="./assets/index-47122462.js"></script>
+    <link rel="stylesheet" href="./assets/index-41137e66.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);async function* g(){};if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <picture>
+      <source
+        media="(max-width: 36em)"
+        srcset="./assets/bg-mobile-light-df636158.jpg "
+      />
+      <img
+        src="./assets/bg-desktop-light-c99caf89.jpg"
+        alt="light-background"
+        class="bg--light"
+      />
+    </picture>
+
+    <picture>
+      <source
+        media="(max-width: 34em)"
+        srcset="./assets/bg-mobile-dark-0b3e4071.jpg "
+      />
+      <img
+        src="./assets/bg-desktop-dark-cf72eaad.jpg"
+        alt="dark-background"
+        class="bg--dark"
+      />
+    </picture>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">TODO</h1>
+        <div class="header__toggle-theme-container">
+          <img
+            src="./assets/icon-moon-dadf6d0a.svg"
+            alt="moon icon"
+            class="header__toggle-theme header__toggle-theme--moon"
+          />
+          <img
+            src="./assets/icon-sun-fc80f87a.svg"
+            alt="moon icon"
+            class="header__toggle-theme header__toggle-theme--sun"
+          />
+        </div>
+      </header>
+
+      <div class="form">
+        <form>
+          <div class="unchecked-circle"></div>
+          <input
+            type="text"
+            placeholder="Create a new todo..."
+            class="form__input"
+          />
+        </form>
+      </div>
+
+      <div class="task-box-container">
+        <ul class="tasks">
+          <!-- <li class="task task--unchecked">
+            <div class="unchecked-circle task__state">&nbsp;</div>
+            <p class="task__title">Jog around the park 3x</p>
+            <img
+              src="./assets/images/icon-cross.svg"
+              alt="delete the task"
+              class="task__delete"
+            />
+          </li>
+          <li class="task task--checked">
+            <div class="checked-circle task__state">&nbsp;</div>
+            <p class="task__title">Complete online Javascript course</p>
+            <img
+              src="./assets/images/icon-cross.svg"
+              alt="delete the task"
+              class="task__delete"
+            />
+          </li> -->
+        </ul>
+
+        <div class="action">
+          <span class="action__items-left">1 item left</span>
+
+          <div class="action__filters">
+            <span
+              class="action__filter action__filter--all action__filter--active"
+              >All</span
+            ><span class="action__filter action__filter--unchecked">Active</span
+            ><span class="action__filter action__filter--checked"
+              >Completed</span
+            >
+          </div>
+
+          <button class="action__delete-all">Clear Completed</button>
+        </div>
+      </div>
+
+      <p class="hint">Drag and drop to reorder list</p>
+    </div>
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-515340e2.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-8e9e0ea0.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
